@@ -1,0 +1,22 @@
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px;
+}
+
+.about-image {
+  height: auto;
+  max-width: 400px;
+  flex: 1;
+  justify-content: center;
+}
+
+.about-description {
+  flex: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    flex-direction: column;
+  }
+}

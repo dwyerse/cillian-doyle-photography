@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.header h2 {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+}
+
+.header h2 a {
+  text-decoration: none;
+  color: dimgray;
+}
+
+.navigation {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation a {
+  display: flex;
+  text-decoration: none;
+  color: gray;
+  transition: 300ms;
+  font-size: large;
+}
+
+.navigation a:hover {
+  color: gray;
+}
+
+.navigation span {
+  color: gray;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    display: inherit;
+  }
+}

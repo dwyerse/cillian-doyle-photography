@@ -1,0 +1,17 @@
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  padding: 16px;
+  gap: 8px;
+}
+
+.booking-send {
+  padding: 8px;
+  background-color: dimgray;
+  width: fit-content;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1em;
+  align-self: flex-end;
+}

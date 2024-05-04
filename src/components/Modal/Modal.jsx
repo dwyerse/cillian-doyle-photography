@@ -1,0 +1,29 @@
+import { useContext, useEffect } from "react";
+import "./Modal.css";
+import ModalContext from "./ModalContext";
+
+function Modal() {
+  const { modalSrc, setModalSrc } = useContext(ModalContext);
+
+  return (
+    <div
+      onClick={(event) => {
+        if (!event.target.closest(".modal-image")) {
+          setModalSrc(null);
+        }
+      }}
+      className={`modal ${modalSrc === null ? "hide-modal" : ""}`}
+    >
+      <img
+        className="modal-image"
+        src={modalSrc}
+        style={{ width: "50%", height: "auto" }}
+      />
+      <div onClick={() => setModalSrc(null)} className="modal-close">
+        X
+      </div>
+    </div>
+  );
+}
+
+export default Modal;
