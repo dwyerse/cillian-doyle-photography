@@ -7,11 +7,33 @@
 }
 
 .booking-send {
-  padding: 8px;
-  background-color: dimgray;
-  width: fit-content;
-  color: white;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border: 1px solid dimgray;
+  border-radius: 2px;
   cursor: pointer;
   font-size: 1.1em;
+  align-self: flex-end;
+  transition: 200ms;
+  font-weight: 500;
+}
+
+.booking-send:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+.booking-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-error {
+  border-color: crimson;
+}
+
+.error-label {
+  color: crimson;
   align-self: flex-end;
 }

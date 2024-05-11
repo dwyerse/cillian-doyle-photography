@@ -1,22 +1,29 @@
 import { useState } from "react";
 import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Landing from "../Landing";
+import { createHashRouter, RouterProvider } from "react-router-dom";
+import Photo from "../Photo";
 import About from "../About/About";
 import Header from "../Header/Header";
 import Modal from "../Modal/Modal";
 import ModalContext from "../Modal/ModalContext";
 import Bookings from "../Bookings/Bookings";
+import Film from "../Film/Film";
+import VideoModal from "../VideoModal/VideoModal";
+import VideoModalContext from "../VideoModal/VideoModalContext";
 
 function App() {
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
-      element: <Landing />,
+      element: <Photo />,
     },
     {
       path: "about",
       element: <About />,
+    },
+    {
+      path: "film",
+      element: <Film />,
     },
     {
       path: "bookings",
@@ -25,14 +32,20 @@ function App() {
   ]);
 
   const [modalSrc, setModalSrc] = useState(null);
+  const [videoModalSrc, setVideoModalSrc] = useState(null);
 
   return (
     <>
-      <ModalContext.Provider value={{ modalSrc, setModalSrc }}>
-        <Modal />
-        <Header />
-        <RouterProvider router={router} />
-      </ModalContext.Provider>
+      <VideoModalContext.Provider value={{ videoModalSrc, setVideoModalSrc }}>
+        <ModalContext.Provider value={{ modalSrc, setModalSrc }}>
+          <VideoModal />
+          <Modal />
+          <Header />
+          <div style={{ marginBottom: 16 }}>
+            <RouterProvider router={router} />
+          </div>
+        </ModalContext.Provider>
+      </VideoModalContext.Provider>
     </>
   );
 }

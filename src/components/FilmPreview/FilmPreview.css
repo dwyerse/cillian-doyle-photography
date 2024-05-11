@@ -1,0 +1,30 @@
+.film-preview {
+  flex-direction: column;
+  display: flex;
+}
+
+.film-preview h2 {
+  margin: 0;
+}
+
+.play-button {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  font-size: 64px;
+  width: fit-content;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+}
+
+.image-container img {
+  width: 100%;
+}

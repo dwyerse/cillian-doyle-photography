@@ -1,80 +1,36 @@
 import GalleryImage from "../GalleryImage/GalleryImage";
+import weddings from "../../assets/images/weddings";
 
 function Gallery() {
   return (
     <div className="row">
       <div className="column">
-        <GalleryImage src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d" />
-        <GalleryImage src="https://images.unsplash.com/photo-1522770179533-24471fcdba45" />
-        <GalleryImage src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d" />
-        <GalleryImage src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d" />
-        <GalleryImage src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d" />
+        <GalleryImage src={weddings.a} />
+        <GalleryImage src={weddings.b} />
+        <GalleryImage src={weddings.c} />
+        <GalleryImage src={weddings.d} />
+        <GalleryImage src={weddings.e} />
       </div>
       <div className="column">
-        <img
-          src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e"
-          style={{ width: "100%" }}
-        />
-        <img
-          src="https://www.w3schools.com/w3images/rocks.jpg"
-          style={{ width: "100%" }}
-        />
-        <img
-          src="https://images.unsplash.com/photo-1522770179533-24471fcdba45"
-          style={{ width: "100%" }}
-        />
-        <img
-          src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e"
-          style={{ width: "100%" }}
-        />
-        <img
-          src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e"
-          style={{ width: "100%" }}
-        />
+        <GalleryImage src={weddings.f} />
+        <GalleryImage src={weddings.g} />
+        <GalleryImage src={weddings.h} />
+        <GalleryImage src={weddings.i} />
+        <GalleryImage src={weddings.a} />
       </div>
       <div className="column">
-        <img
-          src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e"
-          style={{ width: "100%" }}
-        />
-        <img
-          src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d"
-          style={{ width: "100%" }}
-        />
-        <img
-          src="https://images.unsplash.com/photo-1522770179533-24471fcdba45"
-          style={{ width: "100%" }}
-        />
-        <img
-          src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e"
-          style={{ width: "100%" }}
-        />
-        <img
-          src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e"
-          style={{ width: "100%" }}
-        />
+        <GalleryImage src={weddings.b} />
+        <GalleryImage src={weddings.c} />
+        <GalleryImage src={weddings.d} />
+        <GalleryImage src={weddings.e} />
+        <GalleryImage src={weddings.f} />
       </div>
       <div className="column">
-        <img
-          src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e"
-          style={{ width: "100%" }}
-        />
-        <img
-          src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d"
-          style={{ width: "100%" }}
-        />
-        <img
-          src="https://images.unsplash.com/photo-1522770179533-24471fcdba45"
-          style={{ width: "100%" }}
-        />
-        <img
-          src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e"
-          style={{ width: "100%" }}
-        />
-        <img
-          src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e"
-          style={{ width: "100%" }}
-        />
+        <GalleryImage src={weddings.g} />
+        <GalleryImage src={weddings.h} />
+        <GalleryImage src={weddings.i} />
+        <GalleryImage src={weddings.a} />
+        <GalleryImage src={weddings.b} />
       </div>
     </div>
   );

@@ -12,7 +12,6 @@ function GalleryImage({ src }) {
         setModalSrc(src);
       }}
       src={src}
-      style={{ width: "100%" }}
     />
   );
 }

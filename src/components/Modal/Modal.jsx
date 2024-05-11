@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import "./Modal.css";
 import ModalContext from "./ModalContext";
 
@@ -14,11 +14,7 @@ function Modal() {
       }}
       className={`modal ${modalSrc === null ? "hide-modal" : ""}`}
     >
-      <img
-        className="modal-image"
-        src={modalSrc}
-        style={{ width: "50%", height: "auto" }}
-      />
+      <img className="modal-image" src={modalSrc} />
       <div onClick={() => setModalSrc(null)} className="modal-close">
         X
       </div>
