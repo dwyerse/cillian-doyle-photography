@@ -8,10 +8,13 @@ function GalleryImage({ src }) {
   return (
     <img
       className="gallery-image"
+      width="1500"
       onClick={() => {
-        setModalSrc(src);
+        setModalSrc(src.large);
       }}
-      src={src}
+      src={`${src.large}`}
+      srcSet={`${src.small} 500w, ${src.medium} 1000w, ${src.large} 1500w`}
+      sizes="(min-width: 620px) calc(25vw - 8px), 100vw"
     />
   );
 }

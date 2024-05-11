@@ -1,36 +1,36 @@
 import GalleryImage from "../GalleryImage/GalleryImage";
-import weddings from "../../assets/images/weddings";
+import Images from "../../assets/images/weddings";
 
 function Gallery() {
   return (
     <div className="row">
       <div className="column">
-        <GalleryImage src={weddings.a} />
-        <GalleryImage src={weddings.b} />
-        <GalleryImage src={weddings.c} />
-        <GalleryImage src={weddings.d} />
-        <GalleryImage src={weddings.e} />
+        <GalleryImage src={Images[0]} />
+        <GalleryImage src={Images[1]} />
+        <GalleryImage src={Images[2]} />
+        <GalleryImage src={Images[3]} />
+        <GalleryImage src={Images[4]} />
       </div>
       <div className="column">
-        <GalleryImage src={weddings.f} />
-        <GalleryImage src={weddings.g} />
-        <GalleryImage src={weddings.h} />
-        <GalleryImage src={weddings.i} />
-        <GalleryImage src={weddings.a} />
+        <GalleryImage src={Images[5]} />
+        <GalleryImage src={Images[6]} />
+        <GalleryImage src={Images[7]} />
+        <GalleryImage src={Images[8]} />
+        <GalleryImage src={Images[0]} />
       </div>
       <div className="column">
-        <GalleryImage src={weddings.b} />
-        <GalleryImage src={weddings.c} />
-        <GalleryImage src={weddings.d} />
-        <GalleryImage src={weddings.e} />
-        <GalleryImage src={weddings.f} />
+        <GalleryImage src={Images[1]} />
+        <GalleryImage src={Images[2]} />
+        <GalleryImage src={Images[3]} />
+        <GalleryImage src={Images[4]} />
+        <GalleryImage src={Images[5]} />
       </div>
       <div className="column">
-        <GalleryImage src={weddings.g} />
-        <GalleryImage src={weddings.h} />
-        <GalleryImage src={weddings.i} />
-        <GalleryImage src={weddings.a} />
-        <GalleryImage src={weddings.b} />
+        <GalleryImage src={Images[6]} />
+        <GalleryImage src={Images[7]} />
+        <GalleryImage src={Images[8]} />
+        <GalleryImage src={Images[0]} />
+        <GalleryImage src={Images[1]} />
       </div>
     </div>
   );

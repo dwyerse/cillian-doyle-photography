@@ -16,10 +16,12 @@ function VideoModal() {
         videoModalSrc === null ? "video-hide-modal" : ""
       }`}
     >
-      <iframe
-        className="video-modal-iframe"
-        src={`https://www.youtube.com/embed/${videoModalSrc}`}
-      ></iframe>
+      {videoModalSrc && (
+        <iframe
+          className="video-modal-iframe"
+          src={`https://www.youtube.com/embed/${videoModalSrc}`}
+        ></iframe>
+      )}
       <div onClick={() => setVideoModalSrc(null)} className="video-modal-close">
         X
       </div>

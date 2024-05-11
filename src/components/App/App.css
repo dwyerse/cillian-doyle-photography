@@ -22,9 +22,15 @@ body {
   width: 100%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   .column {
-    -ms-flex: 100%;
+    flex: calc(50% - 8px);
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .column {
     flex: 100%;
     max-width: 100%;
   }

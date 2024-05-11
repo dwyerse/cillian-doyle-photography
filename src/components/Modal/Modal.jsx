@@ -14,7 +14,7 @@ function Modal() {
       }}
       className={`modal ${modalSrc === null ? "hide-modal" : ""}`}
     >
-      <img className="modal-image" src={modalSrc} />
+      {modalSrc && <img className="modal-image" src={modalSrc} />}
       <div onClick={() => setModalSrc(null)} className="modal-close">
         X
       </div>
