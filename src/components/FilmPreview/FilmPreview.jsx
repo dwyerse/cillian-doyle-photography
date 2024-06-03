@@ -20,7 +20,7 @@ function FilmPreview({ src }) {
           onClick={() => {
             setVideoModalSrc(src);
           }}
-          class="play-button material-symbols-outlined"
+          className="play-button material-symbols-outlined"
         >
           play_circle
         </span>

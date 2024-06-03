@@ -1,4 +1,17 @@
 .gallery-image {
   cursor: pointer;
   width: 100%;
+  animation: gallery-image linear forwards;
+  animation-timeline: view();
+  animation-range-start: entry;
+  animation-range-end: 35%;
+  scale: 0.8;
+  opacity: 0;
+}
+
+@keyframes gallery-image {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
 }

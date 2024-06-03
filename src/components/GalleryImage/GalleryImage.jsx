@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import "./GalleryImage.css";
 import ModalContext from "../Modal/ModalContext";
+import "./GalleryImage.css";
 
 function GalleryImage({ src }) {
   const { setModalSrc } = useContext(ModalContext);

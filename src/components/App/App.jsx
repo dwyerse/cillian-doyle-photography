@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./App.css";
 import { createHashRouter, RouterProvider } from "react-router-dom";
-import Photo from "../Photo";
 import About from "../About/About";
 import Header from "../Header/Header";
 import Modal from "../Modal/Modal";
@@ -10,12 +9,29 @@ import Bookings from "../Bookings/Bookings";
 import Film from "../Film/Film";
 import VideoModal from "../VideoModal/VideoModal";
 import VideoModalContext from "../VideoModal/VideoModalContext";
+import Gallery from "../Gallery/Gallery";
+import Events from "../../assets/images/events";
+import Corporate from "../../assets/images/corporate";
+import Weddings from "../../assets/images/weddings";
+import Landing from "../Landing/Landing";
 
 function App() {
   const router = createHashRouter([
     {
       path: "/",
-      element: <Photo />,
+      element: <Gallery images={Weddings} />,
+    },
+    {
+      path: "/weddings",
+      element: <Gallery images={Weddings} />,
+    },
+    {
+      path: "/corporate",
+      element: <Gallery images={Corporate} />,
+    },
+    {
+      path: "/events",
+      element: <Gallery images={Events} />,
     },
     {
       path: "about",

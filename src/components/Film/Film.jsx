@@ -6,8 +6,8 @@ function Film() {
 
   return (
     <div className="films">
-      {films.map((src) => (
-        <FilmPreview src={src} />
+      {films.map((src, index) => (
+        <FilmPreview key={`film-preview-${index}`} src={src} />
       ))}
     </div>
   );

@@ -28,4 +28,5 @@
   user-select: none;
   aspect-ratio: 16/9;
   width: 90%;
+  max-height: 90%;
 }

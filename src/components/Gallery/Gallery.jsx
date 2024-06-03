@@ -1,39 +1,41 @@
 import GalleryImage from "../GalleryImage/GalleryImage";
-import Images from "../../assets/images/weddings";
 
-function Gallery() {
-  return (
-    <div className="row">
-      <div className="column">
-        <GalleryImage src={Images[0]} />
-        <GalleryImage src={Images[1]} />
-        <GalleryImage src={Images[2]} />
-        <GalleryImage src={Images[3]} />
-        <GalleryImage src={Images[4]} />
-      </div>
-      <div className="column">
-        <GalleryImage src={Images[5]} />
-        <GalleryImage src={Images[6]} />
-        <GalleryImage src={Images[7]} />
-        <GalleryImage src={Images[8]} />
-        <GalleryImage src={Images[0]} />
-      </div>
-      <div className="column">
-        <GalleryImage src={Images[1]} />
-        <GalleryImage src={Images[2]} />
-        <GalleryImage src={Images[3]} />
-        <GalleryImage src={Images[4]} />
-        <GalleryImage src={Images[5]} />
-      </div>
-      <div className="column">
-        <GalleryImage src={Images[6]} />
-        <GalleryImage src={Images[7]} />
-        <GalleryImage src={Images[8]} />
-        <GalleryImage src={Images[0]} />
-        <GalleryImage src={Images[1]} />
-      </div>
-    </div>
-  );
+const NUM_COLUMNS = 4;
+
+function Gallery({ images }) {
+  const numberOfImages = images.length;
+  const imagesPerColumn = Math.ceil(numberOfImages / NUM_COLUMNS);
+  function generateColumns() {
+    const columns = [];
+    let imageIndex = 0;
+
+    for (let i = 0; i < NUM_COLUMNS; i++) {
+      const galleryImages = [];
+      for (
+        let j = 0;
+        j < imagesPerColumn && imageIndex + j < numberOfImages;
+        j++
+      ) {
+        galleryImages.push(
+          <GalleryImage
+            key={`gallery-image-${imageIndex}`}
+            src={images[imageIndex]}
+          />
+        );
+        imageIndex++;
+      }
+
+      columns.push(
+        <div className="column" key={`column-${i}`}>
+          {galleryImages}
+        </div>
+      );
+    }
+
+    return columns;
+  }
+
+  return <div className="row">{generateColumns()}</div>;
 }
 
 export default Gallery;
